@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYB Admin | Overview</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span class="brand-text">CYB ADMIN</span>
+                <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin.html" class="nav-item active"><i class="fas fa-chart-line"></i> Overview</a>
+                <a href="appointments.html" class="nav-item"><i class="fas fa-calendar-check"></i> Appointments</a>
+                <a href="pricing.html" class="nav-item"><i class="fas fa-tags"></i> Services & Pricing</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="login.html" class="nav-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header Bar -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                    <h1 class="page-title kicker">OVERVIEW</h1>
+                </div>
+                <div class="header-right">
+                    <span class="current-date">Thursday, Oct 1, 2026</span>
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Key Performance Indicators (KPIs) -->
+                <section class="kpi-grid">
+                    <div class="kpi-card highlight">
+                        <span class="kpi-label">Require WhatsApp Action</span>
+                        <div class="kpi-value">5</div>
+                        <span class="kpi-title">Pending Confirmations</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-label">This Month</span>
+                        <div class="kpi-value">124</div>
+                        <span class="kpi-title">Total Bookings</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-label">This Month</span>
+                        <div class="kpi-value">Rp 45.500.000</div>
+                        <span class="kpi-title">Estimated Revenue</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-label">This Month</span>
+                        <div class="kpi-value">112</div>
+                        <span class="kpi-title">Completed Sessions</span>
+                    </div>
+                </section>
+
+                <div class="dashboard-widgets">
+                    <!-- Recent Appointments Table Widget -->
+                    <section class="widget table-widget">
+                        <h2 class="widget-title">Recent Appointments</h2>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>CLIENT</th>
+                                        <th>SERVICE</th>
+                                        <th>DATE & TIME</th>
+                                        <th>LOCATION</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Alex Rivers</td>
+                                        <td>Custom Tattoo</td>
+                                        <td>10/01/2026 @ 09:00</td>
+                                        <td>Seminyak</td>
+                                        <td><span class="badge badge-pending">PENDING</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sarah Jenkins</td>
+                                        <td>Fine-line Tattoo</td>
+                                        <td>10/01/2026 @ 14:00</td>
+                                        <td>Canggu</td>
+                                        <td><span class="badge badge-confirmed">CONFIRMED</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Budi Santoso</td>
+                                        <td>Piercing</td>
+                                        <td>09/30/2026 @ 11:00</td>
+                                        <td>Ubud</td>
+                                        <td><span class="badge badge-completed">COMPLETED</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Megan Fox</td>
+                                        <td>Cover-up Tattoo</td>
+                                        <td>09/29/2026 @ 15:30</td>
+                                        <td>Uluwatu</td>
+                                        <td><span class="badge badge-completed">COMPLETED</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Consultation</td>
+                                        <td>09/28/2026 @ 10:00</td>
+                                        <td>Nusa Dua</td>
+                                        <td><span class="badge badge-completed">COMPLETED</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="appointments.html" class="btn btn-outline-diamond view-all-btn">
+                            <span class="diamond left"></span>
+                            VIEW ALL APPOINTMENTS &rarr;
+                            <span class="diamond right"></span>
+                        </a>
+                    </section>
+
+                    <!-- Today's Schedule Timeline Widget -->
+                    <section class="widget timeline-widget">
+                        <h2 class="widget-title">Today's Schedule</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">09:00 AM</div>
+                                <div class="timeline-content">
+                                    <h4>Alex Rivers</h4>
+                                    <p>Villa Moonlight, Canggu</p>
+                                    <span class="timeline-service">Piercing</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">02:00 PM</div>
+                                <div class="timeline-content">
+                                    <h4>Sarah Jenkins</h4>
+                                    <p>The W Hotel, Seminyak</p>
+                                    <span class="timeline-service">Fine-line Tattoo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

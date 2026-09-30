@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYB Admin | Secure Login</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="login-header">
+                <h1 class="brand-title">CYB ADMIN</h1>
+                <p class="subtitle">Enter your credentials to access the dashboard.</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group" id="emailGroup">
+                    <label for="email" class="form-label kicker">EMAIL ADDRESS</label>
+                    <input type="email" id="email" class="form-input" placeholder="admin@cybbali.com" required>
+                    <span class="error-msg">Invalid credentials. Please try again.</span>
+                </div>
+                
+                <div class="form-group" id="passwordGroup">
+                    <label for="password" class="form-label kicker">PASSWORD</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+                        <button type="button" id="togglePassword" class="password-toggle" aria-label="Toggle password visibility">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="error-msg">Invalid credentials. Please try again.</span>
+                </div>
+                
+                <div class="form-actions-secondary">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="custom-checkbox"></span>
+                        <span class="remember-label">Remember my device</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="btn btn-outline-diamond login-submit">
+                    <span class="diamond left"></span>
+                    <span class="btn-text">SECURE LOGIN</span>
+                    <span class="diamond right"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

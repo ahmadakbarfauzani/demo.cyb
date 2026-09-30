@@ -56,7 +56,8 @@
             <!-- Quick Actions -->
             <div class="quick-actions">
                 <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/123456789?text=I%20would%20like%20to%20book%20a%20session" class="btn btn-primary" target="_blank">BOOK NOW</a>
+                <a href="https://wa.me/123456789?text=I%20would%20like%20to%20book%20a%20session"
+                    class="btn btn-primary" target="_blank">BOOK NOW</a>
                 <!-- Mobile Menu Toggle -->
                 <button class="menu-toggle" aria-label="Toggle Menu">
                     <i class="fas fa-bars"></i>
@@ -258,7 +259,7 @@
                     <div class="feature-card delay-1">
                         <div class="feature-icon">
                             <!-- We can reuse icon-clippers.png as placeholder or rename later, leaving as is for theme consistency unless asked -->
-                            <img src="assets/icon-clippers.png" alt="Expert Artistry Icon" />
+                            <img src="assets/pngttot-removebg-preview.png" alt="Expert Artistry Icon" />
                         </div>
                         <h3 class="feature-title">EXPERT ARTISTRY</h3>
                         <p class="feature-text">Custom designs, fine line precision, and professional piercings. Real
@@ -391,8 +392,10 @@
                             <h3 class="service-title-stacked">TATTOO</h3>
                             <span class="service-badge-stacked">From Rp 800K</span>
                         </div>
-                        <p class="service-desc-stacked">Custom designs, fine-line, and traditional blackwork by resident artists. Strict hygiene standards.</p>
-                        <a href="https://wa.me/123456789?text=I%20would%20like%20to%20book%20a%20Tattoo%20session" class="service-cta-stacked">BOOK THIS &rarr;</a>
+                        <p class="service-desc-stacked">Custom designs, fine-line, and traditional blackwork by resident
+                            artists. Strict hygiene standards.</p>
+                        <a href="https://wa.me/123456789?text=I%20would%20like%20to%20book%20a%20Tattoo%20session"
+                            class="service-cta-stacked">BOOK THIS &rarr;</a>
                     </div>
                 </div>
                 <!-- Service 2 -->
@@ -403,8 +406,10 @@
                             <h3 class="service-title-stacked">PIERCING</h3>
                             <span class="service-badge-stacked">From Rp 250K</span>
                         </div>
-                        <p class="service-desc-stacked">Professional ear and body piercing using sterilized, implant-grade titanium jewelry.</p>
-                        <a href="https://wa.me/123456789?text=I%20would%20like%20to%20book%20a%20Piercing%20session" class="service-cta-stacked">BOOK THIS &rarr;</a>
+                        <p class="service-desc-stacked">Professional ear and body piercing using sterilized,
+                            implant-grade titanium jewelry.</p>
+                        <a href="https://wa.me/123456789?text=I%20would%20like%20to%20book%20a%20Piercing%20session"
+                            class="service-cta-stacked">BOOK THIS &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -511,7 +516,7 @@
                     <div class="footer-block">
                         <span class="kicker">WHERE WE GO</span>
                         <h2 class="footer-headline">ACROSS BALI.</h2>
-                        
+
                         <div class="location-grid">
                             <span class="location-tag">NUSA DUA</span>
                             <span class="location-tag">ULUWATU</span>
@@ -524,7 +529,8 @@
 
                     <div class="footer-block">
                         <span class="kicker">TRAVEL INCLUDED</span>
-                        <p class="body-text footer-text">Transport is built into the price across these areas. Further out? Message us and we'll make it work.</p>
+                        <p class="body-text footer-text">Transport is built into the price across these areas. Further
+                            out? Message us and we'll make it work.</p>
                     </div>
 
                     <div class="footer-contact-links">
@@ -542,25 +548,55 @@
                 <!-- Right Column -->
                 <div class="footer-right">
                     <div class="footer-block">
-                        <span class="kicker">HOURS</span>
-                        <h2 class="footer-headline">BY APPOINTMENT.</h2>
-                        
-                        <ul class="schedule-list">
-                            <li><span>Monday</span><span>10 AM &ndash; 10 PM</span></li>
-                            <li><span>Tuesday</span><span>10 AM &ndash; 10 PM</span></li>
-                            <li><span>Wednesday</span><span>10 AM &ndash; 10 PM</span></li>
-                            <li><span>Thursday</span><span>10 AM &ndash; 10 PM</span></li>
-                            <li><span>Friday</span><span>10 AM &ndash; 10 PM</span></li>
-                            <li><span>Saturday</span><span>10 AM &ndash; 10 PM</span></li>
-                            <li><span>Sunday</span><span>10 AM &ndash; 10 PM</span></li>
-                        </ul>
-                    </div>
+                        <span class="kicker">BOOKING</span>
+                        <h2 class="footer-headline">BOOK YOUR SESSION.</h2>
 
-                    <a href="https://wa.me/123456789" class="btn btn-outline-diamond footer-cta">
-                        <span class="diamond left"></span>
-                        BOOK ON WHATSAPP
-                        <span class="diamond right"></span>
-                    </a>
+                        <form class="booking-form" id="bookingForm">
+                            <div class="form-group">
+                                <label for="fullName" class="form-label kicker">FULL NAME</label>
+                                <input type="text" id="fullName" class="form-input" placeholder="Your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="whatsapp" class="form-label kicker">WHATSAPP NUMBER</label>
+                                <input type="tel" id="whatsapp" class="form-input" placeholder="+62..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service" class="form-label kicker">SELECT SERVICE</label>
+                                <select id="service" class="form-input" required>
+                                    <option value="" disabled selected>Choose a service</option>
+                                    <option value="Tattoo Session">Tattoo Session</option>
+                                    <option value="Piercing">Piercing</option>
+                                    <option value="Consultation">Consultation</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="datetime" class="form-label kicker">DATE & TIME</label>
+                                <input type="datetime-local" id="datetime" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location" class="form-label kicker">LOCATION</label>
+                                <select id="location" class="form-input" required>
+                                    <option value="" disabled selected>Select area</option>
+                                    <option value="Nusa Dua">Nusa Dua</option>
+                                    <option value="Uluwatu">Uluwatu</option>
+                                    <option value="Seminyak">Seminyak</option>
+                                    <option value="Canggu">Canggu</option>
+                                    <option value="Ubud">Ubud</option>
+                                    <option value="Other">Other (specify on WhatsApp)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-diamond footer-cta booking-submit">
+                                <span class="diamond left"></span>
+                                CONFIRM
+                                <span class="diamond right"></span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -575,7 +611,7 @@
                     </div>
                     <p class="copyright">&copy; 2026 CYB Mobile Studio - Bali. All rights reserved.</p>
                 </div>
-                
+
                 <ul class="sub-footer-nav">
                     <li><a href="#">Canggu</a></li>
                     <li><a href="#">Seminyak</a></li>

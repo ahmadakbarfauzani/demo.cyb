@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYB Admin | Appointments</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span class="brand-text">CYB ADMIN</span>
+                <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin.html" class="nav-item"><i class="fas fa-chart-line"></i> Overview</a>
+                <a href="appointments.html" class="nav-item active"><i class="fas fa-calendar-check"></i> Appointments</a>
+                <a href="pricing.html" class="nav-item"><i class="fas fa-tags"></i> Services & Pricing</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="login.html" class="nav-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header Bar -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+                    <h1 class="page-title kicker">APPOINTMENTS</h1>
+                </div>
+                <div class="header-right">
+                    <span class="current-date">Thursday, Oct 1, 2026</span>
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content appointments-page">
+                <!-- Controls Top Bar -->
+                <div class="controls-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="form-input search-input" placeholder="Search client name or service...">
+                    </div>
+                    <div class="filter-box">
+                        <select class="form-input filter-select">
+                            <option value="All">All Statuses</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Confirmed">Confirmed</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Appointments Data Table -->
+                <div class="appointments-container">
+                    <table class="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>BOOKING ID</th>
+                                <th>CLIENT INFO</th>
+                                <th>SERVICE & PRICE</th>
+                                <th>DATE & TIME</th>
+                                <th>LOCATION</th>
+                                <th>STATUS</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1: Pending -->
+                            <tr>
+                                <td data-label="BOOKING ID"><span class="booking-id">#CYB-001</span></td>
+                                <td data-label="CLIENT INFO">
+                                    <div class="client-info">
+                                        <span class="client-name">Alex Rivers</span>
+                                        <span class="client-phone">+62 812-3456-7890</span>
+                                    </div>
+                                </td>
+                                <td data-label="SERVICE & PRICE">
+                                    <div class="service-info">
+                                        <span class="service-name">Piercing</span>
+                                        <span class="service-price">Rp 250.000</span>
+                                    </div>
+                                </td>
+                                <td data-label="DATE & TIME">10/01/2026 @ 09:00</td>
+                                <td data-label="LOCATION">
+                                    <div class="location-info">
+                                        <span class="loc-area">Canggu</span>
+                                        <span class="loc-detail">Villa Moonlight</span>
+                                    </div>
+                                </td>
+                                <td data-label="STATUS">
+                                    <span class="status-badge status-pending">PENDING</span>
+                                </td>
+                                <td data-label="ACTIONS">
+                                    <div class="action-buttons">
+                                        <a href="https://wa.me/6281234567890" target="_blank" class="action-btn wa-btn" aria-label="WhatsApp">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                        <button class="action-btn more-btn" aria-label="More Options">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Row 2: Confirmed -->
+                            <tr>
+                                <td data-label="BOOKING ID"><span class="booking-id">#CYB-002</span></td>
+                                <td data-label="CLIENT INFO">
+                                    <div class="client-info">
+                                        <span class="client-name">Sarah Jenkins</span>
+                                        <span class="client-phone">+62 813-9876-5432</span>
+                                    </div>
+                                </td>
+                                <td data-label="SERVICE & PRICE">
+                                    <div class="service-info">
+                                        <span class="service-name">Fine-line Tattoo</span>
+                                        <span class="service-price">Rp 1.500.000</span>
+                                    </div>
+                                </td>
+                                <td data-label="DATE & TIME">10/01/2026 @ 14:00</td>
+                                <td data-label="LOCATION">
+                                    <div class="location-info">
+                                        <span class="loc-area">Seminyak</span>
+                                        <span class="loc-detail">The W Hotel</span>
+                                    </div>
+                                </td>
+                                <td data-label="STATUS">
+                                    <span class="status-badge status-confirmed">CONFIRMED</span>
+                                </td>
+                                <td data-label="ACTIONS">
+                                    <div class="action-buttons">
+                                        <a href="https://wa.me/6281398765432" target="_blank" class="action-btn wa-btn" aria-label="WhatsApp">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                        <button class="action-btn more-btn" aria-label="More Options">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 3: Completed -->
+                            <tr>
+                                <td data-label="BOOKING ID"><span class="booking-id">#CYB-003</span></td>
+                                <td data-label="CLIENT INFO">
+                                    <div class="client-info">
+                                        <span class="client-name">Budi Santoso</span>
+                                        <span class="client-phone">+62 811-1122-3344</span>
+                                    </div>
+                                </td>
+                                <td data-label="SERVICE & PRICE">
+                                    <div class="service-info">
+                                        <span class="service-name">Piercing</span>
+                                        <span class="service-price">Rp 300.000</span>
+                                    </div>
+                                </td>
+                                <td data-label="DATE & TIME">09/30/2026 @ 11:00</td>
+                                <td data-label="LOCATION">
+                                    <div class="location-info">
+                                        <span class="loc-area">Ubud</span>
+                                        <span class="loc-detail">Four Seasons Resort</span>
+                                    </div>
+                                </td>
+                                <td data-label="STATUS">
+                                    <span class="status-badge status-completed">COMPLETED</span>
+                                </td>
+                                <td data-label="ACTIONS">
+                                    <div class="action-buttons">
+                                        <a href="https://wa.me/6281111223344" target="_blank" class="action-btn wa-btn" aria-label="WhatsApp">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                        <button class="action-btn more-btn" aria-label="More Options">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Row 4: Cancelled -->
+                            <tr>
+                                <td data-label="BOOKING ID"><span class="booking-id">#CYB-004</span></td>
+                                <td data-label="CLIENT INFO">
+                                    <div class="client-info">
+                                        <span class="client-name">Megan Fox</span>
+                                        <span class="client-phone">+1 310-555-0199</span>
+                                    </div>
+                                </td>
+                                <td data-label="SERVICE & PRICE">
+                                    <div class="service-info">
+                                        <span class="service-name">Cover-up Tattoo</span>
+                                        <span class="service-price">Rp 3.500.000</span>
+                                    </div>
+                                </td>
+                                <td data-label="DATE & TIME">09/29/2026 @ 15:30</td>
+                                <td data-label="LOCATION">
+                                    <div class="location-info">
+                                        <span class="loc-area">Uluwatu</span>
+                                        <span class="loc-detail">Ulu Cliffhouse</span>
+                                    </div>
+                                </td>
+                                <td data-label="STATUS">
+                                    <span class="status-badge status-cancelled">CANCELLED</span>
+                                </td>
+                                <td data-label="ACTIONS">
+                                    <div class="action-buttons">
+                                        <a href="https://wa.me/13105550199" target="_blank" class="action-btn wa-btn" aria-label="WhatsApp">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                        <button class="action-btn more-btn" aria-label="More Options">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- Empty State (Hidden by default) -->
+                    <!-- <div class="empty-state">
+                        <p>No appointments found.</p>
+                    </div> -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
